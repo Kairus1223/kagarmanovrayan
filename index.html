@@ -1,38 +1,247 @@
 <!DOCTYPE html>
-<html lang="RU"
->
+<html lang="ru" data-theme="dark">
 <head>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Kairus — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div>
-            <nav class="nav_container">
-                <img class="logo" src="light_logo.png" href="" alt="">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="nav_container">
+            <a href="#" class="logo">
+                <img src="light_logo.png" alt="Kairus" class="logo-dark">
+                <img src="dark_logo.png" alt="Kairus" class="logo-light">
+            </a>
+
+            <nav>
                 <ul class="header_list">
-                    <li>
-                        <a class="header_listl" href="/">Посмотреть работы</a>
-                    </li>
-                    <li>
-                        <a class="header_listl" href="/">dfs</a>
-                    </li> 
-                    <li>
-                        <a class="header_listl" href="/">qgs</a>
-                    </li>
-                    <li>
-                        <a class="header_listl" href="/">sswgds</a>
-                    </li>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#portfolio">Работы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
                 </ul>
-                 <button class="button">Начать</button>
             </nav>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                <span class="theme-icon sun">☀️</span>
+                <span class="theme-icon moon">🌙</span>
+            </button>
+
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>    
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#portfolio">Работы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tag">👋 Привет, я Kairus</span>
+            <h1 class="hero-title">
+                Создаю <span class="accent">Сайты и</span><br>
+                Приложения
+            </h1>
+            <p class="hero-desc">
+                Дизайнер и разработчик, который превращает идеи в функциональные продукты.
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Посмотреть работы</a>
+                <a href="#contact" class="btn btn-outline">Связаться</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-circle"></div>
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <span class="section-tag">01 — Обо мне</span>
+            <h2 class="section-title">Немного о себе</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Я специализируюсь на создании современных веб-интерфейсов, 
+                        которые сочетают в себе <strong>минимализм</strong>, 
+                        <strong>функциональность</strong> и <strong>эстетику</strong>.
+                    </p>
+                    <p>
+                        Каждый проект для меня — это возможность решить интересную задачу 
+                        и создать что-то, чем можно гордиться.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Проектов</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Лет опыта</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Клиентов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3>Навыки</h3>
+                    <div class="skills-list">
+                        <span class="skill">UI/UX Design</span>
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Figma</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">TypeScript</span>
+                        <span class="skill">Motion Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <span class="section-tag">02 — Работы</span>
+            <h2 class="section-title">Избранные проекты</h2>
+            <div class="portfolio-grid">
+                <a href="#" class="portfolio-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <span>01</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>DFS Project</h3>
+                        <p>Веб-приложение · Дизайн</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <span>02</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>QGS Platform</h3>
+                        <p>Брендинг · Разработка</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <span>03</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>SSWGDS</h3>
+                        <p>Интерфейс · Анимация</p>
+                    </div>
+                </a>
+                <a href="#" class="portfolio-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                        <span>04</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Kairus Brand</h3>
+                        <p>Айдентика · Логотип</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <span class="section-tag">03 — Контакты</span>
+            <h2 class="section-title">Давайте работать вместе</h2>
+            <p class="contact-desc">
+                Есть идея или проект? Напишите мне — обсудим детали.
+            </p>
+            <a href="mailto:teamkairus@gmail.com" class="btn btn-primary btn-large">
+                TeamKairus@gmail.com →
+            </a>
+            <div class="socials">
+                <a href="https://t.me/Kairus1224" class="social-link">Telegram</a>
+                <a href="https://github.com/Kairus1223" class="social-link">GitHub</a>
+                <a href="https://www.behance.net/rayankagarmanov/projects" class="social-link">Behance</a>
+                <a href="https://dribbble.com/teamkairus" class="social-link">Dribbble</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <span>© 2026 Kairus. Все права защищены.</span>
+            <span>Сделано с ❤️</span>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Theme Toggle =====
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        if (saved) html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'white' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+
+        // ===== Burger Menu =====
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // ===== Smooth Scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ===== Reveal on Scroll =====
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.portfolio-card, .stat, .skill, .about-text, .about-skills')
+            .forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
